@@ -1,3 +1,4 @@
+//this is root page js file whick is responsible for the home page like my-page.com/
 export default function Home() {
   return (
     <main>
