@@ -1,6 +1,7 @@
 import Link from "next/link";
-
-import Header from './components/header';
+ 
+//@ alias for ../ (@ refer root project)
+import Header from '@/components/header';
 
 //this is root page js file whick is responsible for the home page like my-page.com/,this file in app folder relly needed to setup routing.
 export default function Home() {

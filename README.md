@@ -36,7 +36,27 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 Note:
+Below mentioned filenames are only reserved when creating them inside of the app/ folder (or any subfolder). Outside of the app/ folder, these filenames are not treated in any special way.Find more here(https://nextjs.org/docs/app/api-reference/file-conventions)
+page.js => Create a new page (e.g., app/about/page.js creates a <your-domain>/about page)
+
+layout.js => Create a new layout that wraps sibling and nested pages
+
+not-found.js => Fallback page for "Not Found" errors (thrown by sibling or nested pages or layouts)
+
+error.js => Fallback page for other errors (thrown by sibling pages or nested pages or layouts)
+
+loading.js => Fallback page which is shown whilst sibling or nested pages (or layouts) are fetching data
+
+route.js => Allows you to create an API route (i.e., a page which does NOT return JSX code but instead data, e.g., in the JSON format)
+
    page.js,layout.js are reserved file name for page content and shell around one or more pages respectivelly.
+
    we also have an icon.png file in project root,and that's another special file name(icon is reserve name) actually.If you add an image called icon,directly in the app folder then it will be used as a favicon(in this proj,icon showing on left corner of brower tab) by NextJS.(we have not setup this icon on rootlayout page.but it still showing)
+
    I have added a folder name 'components' and created a standard rect component there. As we added a foler inside 'app' ,it doesn't mean we should be able visit[url/components].It will trough a [404error] if we will do this because this file is ignored by Nextjs when it's come to routing as we don't have page.js file in here.
+
+   I have moved components folder to root folder(outside of app) as it's not used for routing.This is just to Organize my Next Project.We can take a reference of this doc to see different [project organization] technique. (https://nextjs.org/docs/app/building-your-application/routing/colocation)
+   
+   @ symbol in import path to refer to the root project like ('../components/header' to '@/components/header'). @/* alias for "./*"
+
 
