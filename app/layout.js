@@ -7,6 +7,7 @@
  * for header ,like to render title or metadata,those will be populated in NextJs by a special variable called meatadata.
  * It's a reserved name like layout and page.
 */
+//this is way to import css file in NextJs.and all styles can be available on every loaded page .
 import './globals.css'
 
 /** if we export a variable or constant with metadata name,it should contain an object where you can then set the title of the page and the description of the page,

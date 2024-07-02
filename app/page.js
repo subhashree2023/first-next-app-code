@@ -1,6 +1,8 @@
 import Link from "next/link";
 
-//this is root page js file whick is responsible for the home page like my-page.com/
+import Header from './components/header';
+
+//this is root page js file whick is responsible for the home page like my-page.com/,this file in app folder relly needed to setup routing.
 export default function Home() {
   /**with NextJS,we would build full-stack applications where the content is rendered on the backend(page.js),and therefore it makes sense that it's no longer 
    * happening in the front-endon the client side.
@@ -12,8 +14,7 @@ export default function Home() {
    * but it will then be updated on the client side with client-side JavaScript code(finished page(required page) will be served qhwn we will visit the page for 1st time.). */
   return (
     <main>
-      <img src="/logo.png" alt="A server surrounded by magic sparkles." />
-      <h1>Welcome to this NextJS Course!</h1>
+      <Header />
       <p>🔥 Let&apos;s get started! 🔥</p>
       {/**with anchor tag it will always load a new page(check reload or cross icon left upper corner of url)(not satisfying singlepage app)
        * So we will use Link(provided by next/link) which will ensure that we will stay at a singlepage app

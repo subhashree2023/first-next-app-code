@@ -35,4 +35,8 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-Note:page.js,layout.js are reserved file name for page content and shell around one or more pages respectivelly.
+Note:
+   page.js,layout.js are reserved file name for page content and shell around one or more pages respectivelly.
+   we also have an icon.png file in project root,and that's another special file name(icon is reserve name) actually.If you add an image called icon,directly in the app folder then it will be used as a favicon(in this proj,icon showing on left corner of brower tab) by NextJS.(we have not setup this icon on rootlayout page.but it still showing)
+   I have added a folder name 'components' and created a standard rect component there. As we added a foler inside 'app' ,it doesn't mean we should be able visit[url/components].It will trough a [404error] if we will do this because this file is ignored by Nextjs when it's come to routing as we don't have page.js file in here.
+
