@@ -59,4 +59,10 @@ route.js => Allows you to create an API route (i.e., a page which does NOT retur
    
    @ symbol in import path to refer to the root project like ('../components/header' to '@/components/header'). @/* alias for "./*"
 
+   Dynamic Routing:
+   Dynamic route is a route which we only define once,but which is then capable of rendering different pages for different blog posts.
+   And in NextJS, we can create such a dynamic route by adding a nested folder where we use square brackets.
+   [] special syntax supported by NextJs.
+   We can create a folder like [] and Inside the square bracket we can put any place holder name(example [slug]). and for rendering page content we need page.js file in that folder.
+
 
