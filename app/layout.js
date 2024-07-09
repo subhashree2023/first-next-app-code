@@ -1,27 +1,41 @@
-/**Layout(reserved name) page will do a layout into which a page will be rendered. 
- * and every Next project requires atlest one layout file,so one layout file on top of app folder,i.e. root layout file.
- * other folder can have their own layout file with will only apply to the pages in that folder and their nested folder.
- * example about folder.
- * **
- * the rootlayout should contain html and body tag like below.page contents will render in body tag as children.
- * for header ,like to render title or metadata,those will be populated in NextJs by a special variable called meatadata.
- * It's a reserved name like layout and page.
-*/
-//this is way to import css file in NextJs.and all styles can be available on every loaded page .
-import './globals.css'
+import './globals.css';
 
-/** if we export a variable or constant with metadata name,it should contain an object where you can then set the title of the page and the description of the page,
- * and also some other metadata fields,which will then applied to all pages that are covered by that layout.
- * So, that's why we don't have the head section here,simply because all the content that goes into head is set with the metadata,or automatically behind the scenes by NextJS. */
 export const metadata = {
-  title: 'NextJS Course App',
-  description: 'Your first NextJS app!',
+  title: 'NextLevel Food',
+  description: 'Delicious meals, shared by a food-loving community.',
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en"> 
+    {/**hydration warning because of extensions like grammaly,codeZilla,wekipedia,LanguageTools etc.So we can use suppresshydration like suppressHydrationWarning="true" . but 
+     * it only works one level deep so if you put it in the <html> element, it won't suppress hydration warnings for the <body> element 
+     *or we can put chrome://flags/#extensions-menu-access-control into your Chrome browser to enable this flag and restart Chrome. 
+     *after restart we can click on the extensions icon (in the upper-right corner of your browser), while you are browsing http://localhost:3000 URL, and toggle those extensions.*/}
+      <body >
+        <div className="header-background">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop
+                  offset="0%"
+                  style={{ stopColor: '#59453c', stopOpacity: '1' }}
+                />
+                <stop
+                  offset="100%"
+                  style={{ stopColor: '#8f3a09', stopOpacity: '1' }}
+                />
+              </linearGradient>
+            </defs>
+            <path
+              fill="url(#gradient)"
+              d="M0,256L48,240C96,224,192,192,288,181.3C384,171,480,181,576,186.7C672,192,768,192,864,181.3C960,171,1056,149,1152,133.3C1248,117,1344,107,1392,101.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+            ></path>
+          </svg>
+        </div>
+
+        {children}
+      </body>
     </html>
   );
 }
