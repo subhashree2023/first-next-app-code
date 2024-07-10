@@ -1,3 +1,4 @@
+import MainHeader from "@/components/main-header";
 import './globals.css';
 
 export const metadata = {
@@ -13,7 +14,7 @@ export default function RootLayout({ children }) {
      *or we can put chrome://flags/#extensions-menu-access-control into your Chrome browser to enable this flag and restart Chrome. 
      *after restart we can click on the extensions icon (in the upper-right corner of your browser), while you are browsing http://localhost:3000 URL, and toggle those extensions.*/}
       <body >
-        <div className="header-background">
+      <div className="header-background">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <defs>
               <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -33,7 +34,7 @@ export default function RootLayout({ children }) {
             ></path>
           </svg>
         </div>
-
+        <MainHeader />
         {children}
       </body>
     </html>
