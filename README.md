@@ -64,5 +64,5 @@ route.js => Allows you to create an API route (i.e., a page which does NOT retur
    And in NextJS, we can create such a dynamic route by adding a nested folder where we use square brackets.
    [] special syntax supported by NextJs.
    We can create a folder like [] and Inside the square bracket we can put any place holder name(example [slug]). and for rendering page content we need page.js file in that folder.
-
+ loading.js is a reserved file name to show data loading msg to user.
 
