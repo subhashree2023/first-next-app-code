@@ -15,6 +15,7 @@ import { getMeals } from "@/lib/meals";
  */
 async function Meals(){
     const meals=await getMeals();
+    // console.log(meals);
     return(
         <MealsGrid meals={meals}/>
     );
@@ -22,7 +23,7 @@ async function Meals(){
 
 export default function MealsPage() {
   const loadingMsg = <p className={classes.loading}> Fetching Meals....</p>;
-  //console.log(meals);
+ 
   return (
     <>
       <header className={classes.header}>
