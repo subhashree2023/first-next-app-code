@@ -5,6 +5,7 @@
 import Image from 'next/image';
 import classes from './page.module.css';
 import { getMeal } from '@/lib/meals';
+import { notFound } from 'next/navigation';
 
 export default function MealDetailsPage({params}){
     /**Next passes some special props to these special files or to these components in these special files. 
@@ -15,6 +16,10 @@ export default function MealDetailsPage({params}){
 
     const meal=getMeal(params.mealSlug);
     //console.log(meal)
+    //without this if condition,error msg is showing when user requesting meals out of list(when change slug in utl).out of list data couldn't found.so it's not an error.should show no found msg.
+    if(!meal){
+        notFound();
+    }
     meal.instructions=meal.instructions.replace(/\n/g,'<br />');
 
     return(<>
