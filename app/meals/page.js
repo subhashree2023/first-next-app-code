@@ -10,7 +10,8 @@ import { getMeals } from "@/lib/meals";
  * Next.js will automatically add the title and metadata to your application.
  * But if you want to add a custom title for a specific page then You can do this by adding a metadata object
  *  to the page itself. Metadata in nested pages will override the metadata in the parent. 
- * This is static metadata defining method.Here meal page metadata will override layout one.*/
+ * This is static metadata defining method.Here meal page metadata will override layout one.
+ * */
 export const metadata = {
   title: 'All Meals',
   description: 'Delicious meals, shared by a food-loving community.',

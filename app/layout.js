@@ -4,8 +4,15 @@ import MainHeaderBacground from "@/components/main-header/main-header-background
 
 import './globals.css';
 
+/** 2nd scenario:if we want title of parent with current one (eg:All Meals | NextLevel Food)then 
+ * we can add title.templete in parent metadata like this.
+ * The %s in the template will be replaced with the specific page title.
+ * */
 export const metadata = {
-  title: 'NextLevel Food',
+  title: {
+    template: '%s | NextLevel Food',
+    default: 'NextLevel Food',
+  },
   description: 'Delicious meals, shared by a food-loving community.',
 };
 
